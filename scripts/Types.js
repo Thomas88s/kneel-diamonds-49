@@ -1,4 +1,5 @@
-import { getTypes, setType } from "./database.js"
+import { getTypes, setType, checkOrderState } from "./dataAccess.js"
+import { dispatchOrderBtnEvent  } from "./orderBtnEvent.js"
 
 const types = getTypes()
 
@@ -7,6 +8,9 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "type") {
           setType(parseInt(event.target.value))
+          if ( checkOrderState() ) {
+            dispatchOrderBtnEvent()
+          }
         }
     }
 )

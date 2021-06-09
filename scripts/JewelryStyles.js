@@ -1,4 +1,6 @@
-import { getStyles, setStyle } from "./database.js"
+import { getStyles, setStyle } from "./dataAccess.js"
+import { dispatchOrderBtnEvent  } from "./orderBtnEvent.js"
+import { checkOrderState } from "./dataAccess.js"
 
 const styles = getStyles()
 
@@ -7,8 +9,11 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "style") {
            setStyle(parseInt(event.target.value))
+           if ( checkOrderState() ) {
+            dispatchOrderBtnEvent()
         }
     }
+}
 )
 
 export const JewelryStyles = () => {
