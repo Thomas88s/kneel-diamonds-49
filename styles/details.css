@@ -4,6 +4,9 @@
   
 }
 .options {
+    background-image: url("https://media.gettyimages.com/photos/singer-neil-diamond-poses-for-a-portrait-in-1980-in-los-angeles-picture-id452891986?k=6&m=452891986&s=612x612&w=0&h=nrk2UhRBdURsDaHcblIKTwmZHWIvV3D0_ePSmk996mc=");
+    background-size: 200px;
+    background-position-x: center;
     flex-basis: 24%;
     margin: 0 2rem;
     border: 1px dashed dodgerblue;

@@ -8,10 +8,16 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #b9f2ff;
 	font-family: "Comfortaa", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
+}
+body {
+    background-image: url("https://media.gettyimages.com/photos/neil-diamond-performs-live-on-stage-during-his-1976-tour-of-the-usa-picture-id96209589?k=6&m=96209589&s=612x612&w=0&h=sw3EdIKWa_ervv-oQxoccdK1Uq977PyOdPmou2nszb0=");
+    
+    background-size: 1500px;
+    background-position-x: 30%;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -24,11 +30,20 @@ ul {
     padding-inline-start: 0.25rem;
 }
 
+.typeSelector {
+    display: inline;
+}
+.typeSelectorBox {    
+    margin: 1rem 0 0rem .5rem;
+    padding: 0.5rem;
+}
+
 #orderButton {
+   
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color: rgb(227, 72, 72);
-    color: lightgoldenrodyellow;
+    background-color: #b9f2ff;
+    color: rgb(141, 133, 250);
     font-size: 1rem;
 }
 
