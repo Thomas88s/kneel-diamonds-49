@@ -47,3 +47,7 @@ ul {
     font-size: 1rem;
 }
 
+.isHidden {
+    display: none;
+  }
+  

@@ -6,6 +6,7 @@ const renderAllHTML = () => {
     mainContainer.innerHTML = KneelDiamonds()
 }
 
+
 renderAllHTML()
 
 document.addEventListener("stateChanged", event => {

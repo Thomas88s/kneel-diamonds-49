@@ -4,16 +4,22 @@ import { JewelryStyles } from "./JewelryStyles.js"
 import { Metals } from "./Metals.js"
 import { Orders } from "./Orders.js"
 import { Types } from "./Types.js"
-import { addCustomOrder } from "./database.js"
+import { addCustomOrder, checkOrderState } from "./dataAccess.js"
 
 document.addEventListener(
     "click",
     (event) => {
         if (event.target.id === "orderButton") {
+            if (checkOrderState() ) {
            addCustomOrder()
-        }
+            } else {
+                window.alert("Please select from all the options")
+        } 
     }
+}
 )
+
+document.addEventListener("showOrderBtn", () => document.querySelector(".orderButton").classList.remove("isHidden"))
 
 export const KneelDiamonds = () => {
     return `
@@ -37,7 +43,7 @@ export const KneelDiamonds = () => {
             ${Types()}
         </article>
         <article>
-            <button id="orderButton">Create Custom Order</button>
+            <button id="orderButton" class="orderButton isHidden">Create Custom Order</button>
         </article>
 
         <article class="customOrders">

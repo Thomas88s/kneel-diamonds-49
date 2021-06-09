@@ -1,4 +1,4 @@
-import { getOrders, getMetals, getSizes, getStyles, getTypes } from "./database.js"
+import { getOrders, getMetals, getSizes, getStyles, getTypes } from "./dataAccess.js"
 
 const metals = getMetals()
 const sizes = getSizes()
@@ -44,7 +44,8 @@ const buildOrderListItem = (order) => {
             }
             return subtotal
     }
-    const finalCost = totalCost()            
+    const finalCost = totalCost()   
+             
     const costString = finalCost.toLocaleString("en-US", {
          style: "currency",
          currency: "USD"
